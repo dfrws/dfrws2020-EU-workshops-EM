@@ -1,0 +1,10 @@
+@inproceedings{sayakkara2018EMComputerMonitor,
+	author={Sayakkara, Asanka and Le-Khac, Nhien-An and Scanlon, Mark},
+	title="{Accuracy Enhancement of Electromagnetic Side-channel Attacks on Computer Monitors}",
+	booktitle="{The Second International Workshop on Criminal Use of Information Hiding (CUING), part of the 13th International Conference on Availability, Reliability and Security (ARES)}",
+	year="2018",
+	month="08",
+	address={Hamburg, Germany},
+	publisher={ACM},
+	abstract="Electromagnetic noise emitted from running computer displays modulates information about the picture frames being displayed on screen. Attacks have been demonstrated on eavesdropping computer displays by utilising these emissions as a side-channel vector. The accuracy of reconstructing a screen image depends on the emission sampling rate and bandwidth of the attackers signal acquisition hardware. The cost of radio frequency acquisition hardware increases with increased supported frequency range and bandwidth. A number of enthusiast-level, affordable software defined radio equipment solutions are currently available facilitating a number of radio-focused attacks at a more reasonable price point. This work investigates three accuracy influencing factors, other than the sample rate and bandwidth, namely noise removal, image blending, and image quality adjustments, that affect the accuracy of monitor image reconstruction through electromagnetic side-channel attacks."
+}

@@ -1,0 +1,12 @@
+@inproceedings{sayakkara2018EMForensics,
+	author={Sayakkara, Asanka and Le-Khac, Nhien-An and Scanlon, Mark},
+	title="{Electromagnetic Side-Channel Attacks: Potential for Progressing Hindered Digital Forensic Analysis}",
+	booktitle="{Proceedings of the International Workshop on Speculative Side Channel Analysis (WoSSCA 2018)}",
+	year="2018",
+	month="07",
+	address={Amsterdam, Netherlands},
+	publisher={ACM},
+	doi="10.1145/3236454.3236512",
+	isbn="978-1-4503-5939-9/18/07",
+	abstract="Digital forensics is fast-growing field involving the discovery and analysis of digital evidence acquired from electronic devices to assist investigations for law enforcement. Traditional digital forensic investigative approaches are often hampered by the data contained on these devices being encrypted. Furthermore, the increasing use of IoT devices with limited standardisation makes it difficult to analyse them with traditional techniques. This paper argues that electromagnetic side-channel analysis has significant potential to progress investigations obstructed by data encryption. Several potential avenues towards this goal are discussed."
+}
