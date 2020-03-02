@@ -1,3 +1,0 @@
-This file is just a placeholder for the presentation slides that will be used
-at the workshop. This file will be replaced with the actual presentation slides
-as soon as it's complete.
