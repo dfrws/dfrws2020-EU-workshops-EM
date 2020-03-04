@@ -11,7 +11,7 @@ This repository contains the materials that will be used at the **Insights from 
 2. Download the **EMvidenceVM.ova** file from the following link and import it on VirtualBox. The downloadable file is about 3.4GB large. When importered into VirtualBox, it will take upto a maximum of 20GB disk space. Most probably, it will be less than that.
 Link: https://drive.google.com/drive/folders/154vCmQ9EeXErynA40HhBsHqGtXVEMWP7?usp=sharing
 
-3. Start the VM and login at the bash prompt with username **emvidence** and password **emvidence**. Once logged-in, type **startx** and press ENTER to start the graphical desktop environment.
+3. Start the VM and login at the bash prompt with username **emvidence** and password **emvidence**. Once logged-in, the graphical desktop environment will start up.
 
 4. We need to get the latest workshop materials that will be downloaded with the help of a shell script. On the Desktop, you can find the shell script called **update-workshop-materials.sh**. Open a terminal at the Desktop and type the following command to run that shell script. It will download the latest version of workshop materials from this Github repository to the desktop.
 
