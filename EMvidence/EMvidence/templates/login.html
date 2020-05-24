@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+      <link rel="stylesheet" href="static/js/jquery-ui-1.12.1.custom/jquery-ui.css">
+      <script src="static/js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script> 
+      <script src="static/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>      
+
+      <script src="static/js/login.js"></script> 
+      <link rel="stylesheet" href="static/css/login.css">
+
+      <link rel="shortcut icon" href="static/favicon.ico">
+
+    <title>EMvidence Side-Channel Investigator</title>
+    </head>
+  
+    <body>
+
+    <br/>
+    <!-- <hr width="100%"> -->
+    <br/> 
+    <br/> 
+
+    <div align="center">
+    <!-- <img src="{{ url_for('static', filename='img/emvidence-title.png') }}" alt="EMvidence Logo" width="1200px"> -->
+    <!-- <img src="static/img/emvidence-title.png" alt="EMvidence Logo" width="1200px"> -->
+    <img src="static/img/logo-with-text.png" alt="EMvidence Logo" width="600px"> 
+    </div>
+
+    <br/>
+    <!-- <hr width="100%"> -->
+    <!-- <br/> -->
+
+    <!--Get the user to submit credintials and then redirect to the dashboard-->
+  
+    <div class="login-form">
+    <p>Please login to continue...</p>
+    <form action="/user-authentication" method="POST">
+      <table>
+        <tr>
+          <td>User name:</td> <td><input type="text" name="uname"><br></td>
+        </tr>
+        <tr>
+          <td>Password:</td>  <td><input type="password" name="passwd"></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <div class="widget">
+              <input type="submit" value="Login" id="login" name="login">
+            </div>
+          </td>          
+        </tr>
+
+        <div id="status"></div>
+
+      </table>
+    </form>
+    </div>
+
+    
+
+    <!-- <br/> -->
+    <!-- <hr width="100%"> -->
+    <!-- <br/> -->
+
+    <div align="center">
+      <!-- <img src="static/img/affiliation-logos.png" alt="EMvidence Logo" width="1200px">  -->
+      <!-- <img src="static/img/logo-with-text.png" alt="EMvidence Logo" width="800px"> -->
+      
+    </div>
+    
+    <!-- <br/> -->
+    <!-- <hr width="100%"> -->
+
+</html>

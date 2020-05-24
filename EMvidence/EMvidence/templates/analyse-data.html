@@ -1,0 +1,93 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <link rel="stylesheet" href="static/js/jquery-ui-1.12.1.custom/jquery-ui.css">
+      <script src="static/js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script> 
+      <script src="static/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>      
+
+      <script src="static/js/analyse-data.js"></script> 
+      <link rel="stylesheet" href="static/css/analyse-data.css">
+
+    <title>EMvidence Side-Channel Investigator</title>
+    </head>
+  
+    <body>
+    
+    <!-- the main toolbar-->
+    {% include 'main-toolbar.html' %}
+
+    <h2>Analyse Data</h2>
+
+    <div class="emvidence-settings">
+      <form action="/" method="POST">
+        <fieldset>
+        <legend>Configure Analysis</legend>
+        <table>
+
+          <tr>
+            <td>
+              <label>Dataset to analyse:</label>              
+              <select name="dataset" id="dataset">
+                <option value="select-dataset" selected="true" disabled="disabled">Select the dataset</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>IoT device:</label>              
+              <select name="iot-device-type" id="iot-device-type">
+                <option value="select-device" selected="true" disabled="disabled">Select IoT Device</option>
+                <!-- <option value="arduino-leonardo">Arduino Leonardo</option> -->
+                <!-- <option value="raspberry-pi-3-b+">RaspberryPi 3B+</option> -->
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <legend>Modules to apply: </legend>
+              <div id="modules-to-apply"></div>
+            </td>
+          </tr>
+          
+        </table>
+
+        </fieldset>
+      </form>
+    </div>
+
+    <table>
+      <tr>
+        <td><div class="analyze-button"><button>Start analysis</button></div></td>
+        <td><div class="cancel-analyze-button"><button>Cancel analysis</button></div></td>
+        <td><div class="save-report-button"><button>Save report</button></div></td>
+      </tr>
+    </table>
+
+    <!-- progress bar to indicate the progress of data capture -->
+    <div id="progressbar"><div class="progress-label">This content will never be visible.</div></div>
+
+    <div class="visualize-data" id="visualize-data">
+
+      <fieldset>
+        <legend>Analysis Summary</legend> 
+        <table id="classification-results" name="classification-results">          
+        </table>
+      </fieldset>
+      <!-- <iframe src="/analysis_report_view" style="border:none;", name="captured-data-view", id="captured-data-view", width="100%", height="100%"></iframe> -->
+    </div>
+
+
+    <div id="footer">
+      <br/>
+      <hr width="100%">
+      EMvidence Side-Channel Investigator
+      <hr width="100%">
+    </div>
+
+    </body>
+</html>

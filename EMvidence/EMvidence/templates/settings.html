@@ -1,0 +1,168 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">      
+
+
+      <link rel="stylesheet" href="static/js/jquery-ui-1.12.1.custom/jquery-ui.css">
+      <script src="static/js/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script> 
+      <script src="static/js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>      
+
+      <script src="static/js/settings.js"></script> 
+      <link rel="stylesheet" href="static/css/settings.css">
+
+    <title>EMvidence Side-Channel Investigator</title>
+    </head>
+  
+    <body>
+    
+    <!-- the main toolbar-->
+    {% include 'main-toolbar.html' %}
+
+    <h2>Settings</h2>
+
+    <div class="emvidence-settings">
+      <form action="/" method="POST">
+        <fieldset>
+        <legend>General Settings</legend>
+        <table>
+          <tr>
+            <td>Default directory to save EM data:<input type="text" name="default-capture-directory" id="default-capture-directory"></td>
+          </tr>
+          <tr>
+            <td>
+              <label>Default EM data file format:</label>              
+              <select name="em-data-format" id="em-data-format">
+                <option value="npy">NumPy format</option>
+                <option value="cfile">cFile format</option>
+              </select>
+            </td>
+          </tr>          
+        </table>
+
+        <table>
+          <tr>
+            <td><div class="save-button"><button>Save</button></div></td>
+            <td><div class="cancel-button"><button>Cancel</button></div></td>
+          </tr>
+        </table>
+
+        </fieldset>
+      </form>
+    </div>
+
+      <fieldset>
+        <legend>Module Settings</legend>
+        <table>
+
+          <form action="/add_module" method="post" enctype="multipart/form-data" id="add-module-form">          
+            <tr>
+              <td>
+                Select module ZIP file to upload:            
+                <div class="widget">
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" value="Upload ZIP" name="upload-zip" id="upload-zip">
+                  <input type="button" value="Cancel" name="cancel-upload" id="cancel-upload">
+                </div>
+              </td>
+            </tr>          
+          </form>
+
+          <tr>
+            <td>
+              <label>Select a module to delete:</label>
+              <select id = "select-module-to-delete">
+                <option value="select-module" selected="true" disabled="disabled">Please pick a module</option>                
+              </select>
+            </td>
+
+            
+            <td>
+              <div class="module-delete-widget">
+                <input type="button" value="Delete" name="delete-module" id="delete-module">
+                <input type="button" value="Cancel" name="cancel-delete" id="cancel-delete">
+              </div>
+            </td>
+          </tr>
+      </table>
+      </fieldset>
+
+
+    <form action="/" method="POST">
+      <fieldset>
+      <legend>IoT Device Settings</legend>
+      <table>
+        <tr>
+          <td>IoT device name:<input type="text" name="new-iot-device-name" id="new-iot-device-name"></td>  
+        </tr>
+        <tr>
+          <td>IoT device description:</td>
+        </tr>
+        <tr>
+          <td>
+            <textarea name="new-iot-device-description" id="new-iot-device-description" rows="4" cols="50" placeholder="Add device description" wrap="physical"></textarea>
+          </td>
+        </tr>
+      </table> 
+
+      <table>
+        <tr>
+          <td><div class="save-iot-button"><button>Add IoT device</button></div></td>
+          <td><div class="cancel-iot-button"><button>Cancel IoT device</button></div></td>
+        </tr>
+      </table>
+       
+      <table>
+        <tr>
+          <td>
+            <label>Select an IoT device to delete:</label>
+            <select id = "select-iot-device-to-delete">
+              <option value="select-device" selected="true" disabled="disabled">Please pick an IoT device</option>              
+            </select>
+          </td>
+          <td>
+            <div class="module-delete-widget">
+              <td><div class="delete-iot-device"><button>Delete</button></div></td>
+              <td><div class="cancel-iot-delete"><button>Cancel</button></div></td>            
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      </fieldset>
+    </form>
+
+
+    <fieldset>
+      <legend>Dataset Settings</legend>
+      <table>
+        <tr>
+          <td>
+            <label>Select a dataset to delete:</label>
+            <select id = "select-dataset-to-delete">
+              <option value="select-dataset" selected="true" disabled="disabled">Please pick a dataset</option>                
+            </select>
+          </td>
+
+          
+          <td>
+            <div class="dataset-delete-widget">
+              <input type="button" value="Delete" name="delete-dataset" id="delete-dataset">
+              <input type="button" value="Cancel" name="cancel-delete-dataset" id="cancel-delete-dataset">
+            </div>
+          </td>
+        </tr>
+    </table>
+    </fieldset>
+
+
+
+    <div id="footer">
+      <br/>
+      <hr width="100%">
+      EMvidence Side-Channel Investigator
+      <hr width="100%">
+    </div>
+
+    </body>
+</html>
